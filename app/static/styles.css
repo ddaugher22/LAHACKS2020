@@ -1,0 +1,13 @@
+.button {
+  float: left;
+  width: 25%;
+  align-items: center;
+  padding-left: 25%;
+}
+
+/* Clear floats after the columns */
+.buttons:after {
+  content: "";
+  display: table;
+  clear: both;
+}
