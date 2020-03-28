@@ -1,0 +1,11 @@
+# To create virtual env
+$ python -m venv venv
+
+# for bash
+$ source venv/Scripts/activate
+
+# for cmd
+$ venv/Scripts/activate.bat
+
+# how to pip install requirements.txt
+$ pip install -r requirements.txt

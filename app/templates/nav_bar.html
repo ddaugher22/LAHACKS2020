@@ -1,0 +1,21 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - BoredButton</title>
+      {% else %}
+      <title>Welcome to BoredButton</title>
+      {% endif %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div>BoredButton: 
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('at_home') }}">At Home</a>
+            <a href="{{ url_for('outdoors') }}">Outdoors</a>
+            <a href="{{ url_for('chat') }}">Chat</a>
+            <a href="{{ url_for('video_call') }}">Video Call</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
