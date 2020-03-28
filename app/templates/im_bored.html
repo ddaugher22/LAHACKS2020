@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>YOU ARE BORED</p>
+    <h1>YOU ARE BORED</h1>
+    <a href="{{ url_for('at_home') }}"><input type="button" value="@ Home"></a>
+    <a href="{{ url_for('go_out') }}"><input type="button" value="Go Out"></a>
+    <a href="{{ url_for('chat') }}"><input type="button" value="Chat"></a>
+    <a href="{{ url_for('video_call') }}"><input type="button" value="Video Call"></a>
 {% endblock %}
