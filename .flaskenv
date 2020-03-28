@@ -1,0 +1,1 @@
+FLASK_APP=hack2020.py
