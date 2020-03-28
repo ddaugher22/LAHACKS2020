@@ -14,9 +14,9 @@ def im_bored():
 def at_home():
  	return render_template('at_home.html', title='At Home')
 
-@app.route('/go_out')
-def go_out():
- 	return render_template('go_out.html', title='Go Out')
+@app.route('/outdoors')
+def outdoors():
+ 	return render_template('outdoors.html', title='Outdoors')
 
 @app.route('/chat')
 def chat():
