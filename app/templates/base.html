@@ -7,7 +7,9 @@
       {% endif %}
     </head>
     <body>
-        <div>BoredButton: <a href="/index">Home</a></div>
+        <div>BoredButton: 
+            <a href="{{ url_for('index') }}">Home</a>
+        </div>
         <hr>
         {% block content %}{% endblock %}
     </body>

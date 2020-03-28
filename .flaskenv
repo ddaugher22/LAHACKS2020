@@ -1,1 +1,2 @@
 FLASK_APP=hack2020.py
+FLASK_DEBUG=1
