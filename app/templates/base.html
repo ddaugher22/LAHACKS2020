@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - BoredButton</title>
+      {% else %}
+      <title>Welcome to BoredButton</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>BoredButton: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
