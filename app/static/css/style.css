@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Blinker&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Expletus+Sans&display=swap");
 
 body{
     text-align: center;
@@ -10,7 +14,7 @@ h1{
     text-align: center;
     background-color: #8686D8;
     color: white;
-    font-family: 'Righteous', cursive;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .nav_bar{
@@ -119,3 +123,63 @@ ul {
     scale: 0.5;
     opacity: 1;
 }
+
+nav {
+    position: absolute;
+    background: black;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  
+  nav .close-btn {
+    width: 22px;
+    float: right;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 10% auto 0 auto;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (4,25%);
+        grid-template-columns: repeat(4, 25%);
+    width: 80%;
+  }
+  
+  nav ul a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  
+  nav ul span {
+    font-family: 'Expletus Sans', cursive;
+    color: grey;
+    display: block;
+    font-size: .75em;
+    margin-top: 20px;
+  }
+  
+  nav ul li {
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  #home_color{
+      background-color: #DD7788;
+  }
+
+  #outdoors_color{
+      background-color: #667799;
+  }

@@ -1,20 +1,21 @@
 {% extends "nav_bar.html" %}
 
 {% block content %}
-    <h1>Outdoors</h1>
-    <button id="outsideSuggestion">Give Me Something to Do Outdoors.</button>
-    <h1 id="suggestionText"></h1>
+    <body id="outdoors_color">
+        <h1>Outdoors</h1>
+        <button id="outsideSuggestion">Give Me Something to Do Outdoors.</button>
+        <h1 id="suggestionText"></h1>
 
-    
-    <script>
-
-        const outsideButton = document.getElementById('outsideSuggestion');
-        outsideButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            getSuggestion('outside');
-        });
         
-    </script>
+        <script>
 
+            const outsideButton = document.getElementById('outsideSuggestion');
+            outsideButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                getSuggestion('outside');
+            });
+            
+        </script>
+    </body>
 {% endblock %}
 

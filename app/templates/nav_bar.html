@@ -6,19 +6,18 @@
       {% else %}
       <title>Welcome to BoredButton</title>
       {% endif %}
+      <!--<img alt="menu" src="{{ url_for('static', filename='navham.jpg') }}">-->
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <div class='nav_bar'>
+        <nav id="overlay">
+            <!--<img alt="close menu" src="{{ url_for('static', filename='navham.jpg') }}">-->
             <ul>
                 <a href="{{ url_for('index') }}">Home</a>
                 <a href="{{ url_for('at_home') }}">At Home</a>
                 <a href="{{ url_for('outdoors') }}">Outdoors</a>
-                <a href="{{ url_for('chat') }}">Chat</a>
-                <a href="{{ url_for('video_call') }}">Video Call</a>
             </ul>
-        </div>
-        <hr>
+        </nav>
         {% block content %}{% endblock %}
 
 
@@ -47,5 +46,19 @@
         firebase.analytics();
         </script>
         <script src="{{ url_for('static', filename='firebase/firebaseAPI.js') }}"></script>
+
+        <script>
+            var overlay = document.getElementById('overlay');
+            var closeMenu = document.getElementById('close-menu');
+    
+            document.getElementById('open-menu').addEventListener('click', function(){
+                overlay.classList.add('show-menu');
+            })
+    
+            document.getElementById('close-menu').addEventListener('click', function(){
+                overlay.classList.remove('show-menu');
+            })
+        </script>
+
     </body>
 </html>
