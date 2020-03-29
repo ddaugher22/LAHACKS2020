@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
       {% if title %}
       <title>{{ title }} - BoredButton</title>
       {% else %}
       <title>Welcome to BoredButton</title>
       {% endif %}
-      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
+      
     </head>
     <body>
         {% block content %}{% endblock %}
