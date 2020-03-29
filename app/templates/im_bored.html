@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="test">YOU ARE BORED</h1>
-<div class="buttons">
-        <a class="button" href="{{ url_for('at_home') }}"><input type="button" value="AT HOME"></a>
-        <a class="button" href="{{ url_for('outdoors') }}"><input type="button" value="OUTDOORS"></a>
-        <a class="button" href="{{ url_for('chat') }}"><input type="button" value="CHAT"></a>
-        <a class="button" href="{{ url_for('video_call') }}"><input type="button" value="VIDEO CALL"></a>
-
-</div>
+<h1>YOU ARE BORED</h1>
+    <div class="row">
+        <a href="{{ url_for('at_home') }}"><input type="button" value="AT HOME"></a>
+        <a href="{{ url_for('outdoors') }}"><input type="button" value="OUTDOORS"></a>
+        <a href="{{ url_for('chat') }}"><input type="button" value="CHAT"></a>
+        <a href="{{ url_for('video_call') }}"><input type="button" value="VIDEO CALL"></a>
+      </div>
 {% endblock %}
