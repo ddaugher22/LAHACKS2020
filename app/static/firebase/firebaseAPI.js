@@ -45,5 +45,5 @@ function getRandomSuggestion(snapshot) {
 }
 
 function updateSuggestion(suggestion) {
-    document.getElementById("suggestionText").textContent = suggestion;
+    document.getElementById("suggestionText").textContent = suggestion.toUpperCase();
 }

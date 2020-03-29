@@ -5,17 +5,40 @@
 @import url("https://fonts.googleapis.com/css?family=Blinker&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Expletus+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
 body{
     text-align: center;
 }
 
-h1 #titleLabel{
+#titleLabel{
     text-align: center;
-    background-color: #8686D8;
+    background-color: white;
+    color: #8686D8;
+    font-family: 'Cairo', sans-serif;
+    margin-bottom: 8px;
+    padding: 0px 0px;
+    border: 6px solid #8686D8;
+    font-size: 48px;
+}
+
+#titleLabel:hover{
+    text-align: center;
+    background-color: #9eb5a8;
     color: white;
-    font-family: 'Bebas Neue', cursive;
-    padding-right: 82px;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 8px;
+    padding: 0px 0px;
+    border: 6px solid #8686D8;
+    font-size: 54px;
+    transition: all 0.2s ease-in-out;
+}
+
+h1:not(#titleLabel){
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    margin-right: 80px;
 }
 
 
@@ -42,19 +65,23 @@ h1 #titleLabel{
 
 /* im_bored.html */
 .row{
-    position:fixed;
-    padding:0;
-    margin:0;
-
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    width: 93%;
+    height: 94%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.column{
-    width: 100%;
-    height: 100%;
+#at_home_column{
+    width: 80%;
+    height: 80%;
+    margin-right: 5px;
+}
+
+#outside_column{
+    width: 80%;
+    height: 80%;
+    margin-left: 5px;
 }
 
 .label{
@@ -74,10 +101,12 @@ h1 #titleLabel{
 
 #at_home_column{
     background-color: #DD7788;
+    color: white;
 }
 
 #outside_column{
     background-color: #667799;
+    color: white;
 
 }
 
@@ -85,36 +114,11 @@ h2{
     font-family: 'Abel', sans-serif;
 }
 
-.card {
-    width: 300px;
-    height: 200px;
-    background-color: black;
-    margin: auto;
-    transform: rotate(-30deg);
-    margin-top: 100px;
-}
-
 .bored_image {
     scale: 0.5;
     opacity: 1;
 }
 
-nav {
-    position: absolute;
-    background: black;
-    padding: 2em;
-    width: calc(100% - 4em);
-    height: calc(100vh - 4em);
-    display: none;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  
-  nav .close-btn {
-    width: 22px;
-    float: right;
 .dropbtn {
     color:#8686D8;
     padding: 8.55px;
@@ -153,10 +157,27 @@ nav {
     transition: all 0.3s ease-in;}
   .dropdown:hover .dropbtn {background-color: white}
 
-  #home_color{
-      background-color: #DD7788;
+
+  #main {
+      width: 94%;
+      position: relative;
+      left: 3%;
+      height: 80%;
   }
 
-  #outdoors_color{
-      background-color: #667799;
+
+  #suggestionText {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 28px;
+      overflow-wrap: break-word;
+      width: 20%;
+      
+  }
+
+  .instruction{
+    font-family: 'Abel', sans-serif;
   }

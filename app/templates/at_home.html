@@ -1,19 +1,16 @@
 {% extends "nav_bar.html" %}
 
 {% block content %}
-    <body id="home_color">
-        <h1>At Home</h1>
-        <button id="insideSuggestion">Give Me Something to Do At Home.</button>
-        <h2 id="suggestionText"></h2>
-        
-        <script>
     
-        const insideButton = document.getElementById('insideSuggestion');
-        insideButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            getSuggestion('home');
-        });
+    <h1>At Home</h1>
+
+    <p class="instruction">(Refresh For New Activity.)</p>
+
+    <div class="card_pink">
+        <image id="card_pos" src="{{ url_for('static', filename='bored_pink.png') }}"></image>
+        <h2 id="suggestionText"></h2>
+    </div>
+
+    <body onload="getSuggestion('home')"></body>
         
-        </script>
-    </body>
 {% endblock %}

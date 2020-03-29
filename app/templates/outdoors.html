@@ -1,21 +1,16 @@
 {% extends "nav_bar.html" %}
 
 {% block content %}
-    <body id="outdoors_color">
-        <h1>Outdoors</h1>
-        <button id="outsideSuggestion">Give Me Something to Do Outdoors.</button>
+    
+    <h1>Outdoors</h1>
+
+    <p class="instruction">(Refresh For New Activity.)</p>
+
+    <div class="card_blue">
+        <image id="card_pos" src="{{ url_for('static', filename='bored_blue.png') }}"></image>
         <h2 id="suggestionText"></h2>
+    </div>
 
+    <body onload="getSuggestion('outside')"></body>
         
-        <script>
-
-            const outsideButton = document.getElementById('outsideSuggestion');
-            outsideButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                getSuggestion('outside');
-            });
-            
-        </script>
-    </body>
 {% endblock %}
-
