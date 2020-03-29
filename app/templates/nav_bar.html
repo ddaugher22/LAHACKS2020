@@ -17,5 +17,32 @@
         </div>
         <hr>
         {% block content %}{% endblock %}
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCmyN_FLXHNj73sNdY-uI0NfX9LIbu9C_Y",
+            authDomain: "lahacks2020-1e92d.firebaseapp.com",
+            databaseURL: "https://lahacks2020-1e92d.firebaseio.com",
+            projectId: "lahacks2020-1e92d",
+            storageBucket: "lahacks2020-1e92d.appspot.com",
+            messagingSenderId: "823175263334",
+            appId: "1:823175263334:web:7b9d95dfd36ef8a7d7e9a7",
+            measurementId: "G-L4W6T4DZB8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+        <script src="{{ url_for('static', filename='firebase/firebaseAPI.js') }}"></script>
     </body>
 </html>
