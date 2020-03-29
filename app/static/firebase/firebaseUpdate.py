@@ -33,7 +33,7 @@ def addSuggestionFile(category, filename):
 
 def addSuggestion(category, suggestion):
     global db
-    db.child("categories").child(category).push(suggestion)
+    db.child("categories").child(category).push(suggestion.encode('utf-8'))
     
 def Main():
     if (len(sys.argv)) < 3:

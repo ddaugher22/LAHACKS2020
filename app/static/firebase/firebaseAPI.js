@@ -41,9 +41,11 @@ function getRandomSuggestion(snapshot) {
         count++;
     });
 
-    return suggestion;
+    return unescape(suggestion);
 }
 
 function updateSuggestion(suggestion) {
     document.getElementById("suggestionText").textContent = suggestion;
 }
+
+addSuggestion("outside", "Rubik's cubeeeee")
