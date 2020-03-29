@@ -5,12 +5,9 @@
       {% else %}
       <title>Welcome to BoredButton</title>
       {% endif %}
-      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
     </head>
     <body>
-        <div class='container'>
-            {% block content %}{% endblock %}
-        </div>
-        
+        {% block content %}{% endblock %}
     </body>
 </html>
