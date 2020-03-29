@@ -10,11 +10,13 @@
     </head>
     <body>
         <div class='nav_bar'>
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('at_home') }}">At Home</a>
-            <a href="{{ url_for('outdoors') }}">Outdoors</a>
-            <a href="{{ url_for('chat') }}">Chat</a>
-            <a href="{{ url_for('video_call') }}">Video Call</a>
+            <ul>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('at_home') }}">At Home</a>
+                <a href="{{ url_for('outdoors') }}">Outdoors</a>
+                <a href="{{ url_for('chat') }}">Chat</a>
+                <a href="{{ url_for('video_call') }}">Video Call</a>
+            </ul>
         </div>
         <hr>
         {% block content %}{% endblock %}

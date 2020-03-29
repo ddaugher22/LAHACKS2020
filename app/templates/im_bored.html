@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>YOU ARE BORED</h1>
+<h1>YOU ARE BORED </h1>
     <div class="row">
-        <div class="column" id="at_home_column">
-            <a class="button" href="{{ url_for('at_home') }}"><input type="button" value="AT HOME"></a>
+        <div class="column" id="at_home_column" id="inside_home_column">
+            <h1 class="label">AT HOME</h1>
         </div>
-        <div class="column" id="outdoors_column">
-            <a class="button" href="{{ url_for('outdoors') }}"><input type="button" value="OUTDOORS"></a>
+        <div class="column" id="outdoors_column" id="inside_outdoors_column">
+            <h1 class="label">CHAT</h1>
         </div>
-        <div class="column" id="chat_column">
-            <a class="button" href="{{ url_for('chat') }}"><input type="button" value="CHAT"></a>
+        <div class="column" id="chat_column" id="inside_chat_column">
+            <h1 class="label">VIDEO CALL</h1>
         </div>
-        <div class="column" id="video_call_column">
-            <a class="button" href="{{ url_for('video_call') }}"><input type="button" value="VIDEO CALL"></a>
+        <div class="column" id="video_call_column" id="inside_call_column">
+            <h1 class="label">OUTDOORS</h1>
         </div>
       </div>
 {% endblock %}
