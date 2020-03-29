@@ -2,7 +2,8 @@
 
 {% block content %}
     <div id="bored_button">
-        <a href="{{ url_for('im_bored') }}"><input type="button" value="I'm Bored!"></a>
+        <a href="{{ url_for('im_bored') }}"><img alt="bored pic" src="{{ url_for('static', filename='im_bored.jpg') }}"></a>
+        <!-- <a href="{{ url_for('im_bored') }}"><input type="button" value="I'm Bored!"></a> -->
     </div>
     
 {% endblock %}
