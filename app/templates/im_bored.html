@@ -6,14 +6,16 @@
         <div class="column" id="at_home_column" id="inside_home_column">
             <h1 class="label">AT HOME</h1>
         </div>
-        <div class="column" id="outdoors_column" id="inside_outdoors_column">
-            <h1 class="label">CHAT</h1>
-        </div>
-        <div class="column" id="chat_column" id="inside_chat_column">
-            <h1 class="label">VIDEO CALL</h1>
-        </div>
         <div class="column" id="video_call_column" id="inside_call_column">
             <h1 class="label">OUTDOORS</h1>
         </div>
-      </div>
+    </div>
+
+    <script>
+    document.getElementById('at_home_column').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location = "{{ url_for('at_home') }}";
+        
+    });
+    </script>
 {% endblock %}

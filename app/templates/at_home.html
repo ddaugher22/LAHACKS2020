@@ -1,18 +1,19 @@
 {% extends "nav_bar.html" %}
 
 {% block content %}
-    <h1>At Home</h1>
-    <button id="insideSuggestion">Give Me Something to Do At Home.</button>
-    <h1 id="suggestionText"></h1>
+    <body id="home_color">
+        <h1>At Home</h1>
+        <button id="insideSuggestion">Give Me Something to Do At Home.</button>
+        <h1 id="suggestionText"></h1>
+        
+        <script>
     
-    <script>
-
-    const insideButton = document.getElementById('insideSuggestion');
-    insideButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        getSuggestion('home');
-    });
-    
-    </script>
-
+        const insideButton = document.getElementById('insideSuggestion');
+        insideButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            getSuggestion('home');
+        });
+        
+        </script>
+    </body>
 {% endblock %}
