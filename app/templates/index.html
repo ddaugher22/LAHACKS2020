@@ -1,8 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
     <div id="bored_button">
-        <a href="{{ url_for('im_bored') }}"><img alt="bored pic" src="{{ url_for('static', filename='im_bored.jpg') }}"></a>
+        <a href="{{ url_for('im_bored') }}"><img class="bored_image" alt="bored pic" src="{{ url_for('static', filename='im_bored.jpg') }}"></a>
     </div>
+
+    <script src="{{ url_for('static', filename='animejs/lib/anime.min.js') }}"></script>
+
+    <script>
+
+    function animateLogo(){
+    
+        anime.timeline({loop: false}).add(
+            {targets: 'div', duration: 3000, scale: [0.2, 1], opacity: [0.2, 1]}).add(
+            {targets: 'div', duration: 2000, scale: [1, 0], opacity: [1, 0]}
+            );
+
+        setTimeout(function(){ window.location = "{{ url_for('im_bored') }}"; }, 4000);
+        
+
+    }
+
+    animateLogo();
+    
+    
+    </script>
     
 {% endblock %}

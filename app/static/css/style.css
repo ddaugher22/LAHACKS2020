@@ -105,3 +105,17 @@ ul {
     border: 4px solid white;
 
 }
+
+.card {
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    margin: auto;
+    transform: rotate(-30deg);
+    margin-top: 100px;
+}
+
+.bored_image {
+    scale: 0.5;
+    opacity: 1;
+}
