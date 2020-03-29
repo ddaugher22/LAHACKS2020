@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
       {% if title %}
@@ -5,10 +6,10 @@
       {% else %}
       <title>Welcome to BoredButton</title>
       {% endif %}
-      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <div>BoredButton: 
+        <div class='nav_bar'>BoredButton: 
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('at_home') }}">At Home</a>
             <a href="{{ url_for('outdoors') }}">Outdoors</a>
